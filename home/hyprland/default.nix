@@ -16,6 +16,8 @@
     recursive = true;
   };
 
+  services.gnome-keyring.enable = true;
+
   services.hyprpaper = {
     enable = true;
     settings = {
