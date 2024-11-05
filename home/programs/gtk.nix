@@ -14,7 +14,7 @@
       package = pkgs.papirus-icon-theme;
     };
     theme = {
-      name = "adw-gtk3";
+      name = "adw-gtk3-dark";
       package = pkgs.adw-gtk3;
     };
     font = {
@@ -23,7 +23,7 @@
     };
     gtk3 = {
       extraConfig = {
-        gtk-theme-name = "adw-gtk3";
+        gtk-theme-name = "adw-gtk3-dark";
         gtk-font-name = "Lexend 12";
         gtk-application-prefer-dark-theme = 1;
         gtk-cursor-theme-name = "Adwaita";
@@ -31,7 +31,7 @@
     };
     gtk4 = {
       extraConfig = {
-        gtk-theme-name = "adw-gtk3";
+        gtk-theme-name = "adw-gtk3-dark";
         gtk-font-name = "Lexend 12";
         gtk-application-prefer-dark-theme = 1;
         gtk-cursor-theme-name = "Adwaita";

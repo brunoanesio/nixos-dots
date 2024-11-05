@@ -14,8 +14,5 @@
     ../../home/programs
     ../../home/hyprland
     ../../home/shell
-    ../../home/rofi
-    ../../home/wlogout
-    # ../../home/nixvim
   ];
 }

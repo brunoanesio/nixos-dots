@@ -1,7 +1,6 @@
 {
   lib,
   pkgs,
-  inputs,
   ...
 }:
 {
@@ -9,7 +8,6 @@
     zip
     unzip
     p7zip
-
     htop
     fastfetch
     zoxide
@@ -20,7 +18,6 @@
     glow
     iotop
     iftop
-
     libnotify
     xdg-utils
     xdg-user-dirs
@@ -48,6 +45,7 @@
         };
       };
     };
+    firefox.enable = true;
     ssh = {
       enable = true;
       addKeysToAgent = "yes";

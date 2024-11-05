@@ -1,12 +1,11 @@
 {
   imports = [
-    ./browsers.nix
     ./common.nix
-    ./git.nix
-    ./spicetify.nix
+    ./dev.nix
+    ./gtk.nix
     ./media.nix
     ./xdg.nix
-    ./gtk.nix
-    ./dev.nix
+    ./rofi
+    ./wlogout
   ];
 }

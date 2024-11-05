@@ -7,6 +7,8 @@
     waybar
     grimblast
     cliphist
+    hyprpaper
+    hypridle
     xfce.mousepad
     kdePackages.polkit-kde-agent-1
   ];
