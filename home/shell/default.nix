@@ -39,5 +39,8 @@ in
     ls = "ls --color=auto";
     la = "ls -a";
     ll = "ls -lah";
+    lg = "lazygit";
+    nixups = "sudo nixos-rebuild switch --recreate-lock-file --flake .";
+    nixup = "sudo nixos-rebuild test --recreate-lock-file --flake .";
   };
 }
