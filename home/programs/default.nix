@@ -7,5 +7,7 @@
     ./xdg.nix
     ./rofi
     ./wlogout
+    ./swaync
+    ./waybar
   ];
 }

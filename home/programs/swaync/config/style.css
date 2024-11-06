@@ -1,13 +1,9 @@
 * {
   all: unset;
   font-size: 16px;
-  font-family: "Lexend";
+  font-family: "Poppins";
   font-weight: 600;
   transition: 200ms;
-}
-
-.blank-window {
-  background: transparent;
 }
 
 trough highlight {

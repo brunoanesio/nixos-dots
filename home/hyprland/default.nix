@@ -9,6 +9,7 @@
     cliphist
     hyprpaper
     hypridle
+    swaynotificationcenter
     xfce.mousepad
     kdePackages.polkit-kde-agent-1
   ];
@@ -17,8 +18,6 @@
     source = ./config;
     recursive = true;
   };
-
-  services.gnome-keyring.enable = true;
 
   services.hyprpaper = {
     enable = true;
@@ -49,10 +48,5 @@
         }
       ];
     };
-  };
-
-  services.swaync = {
-    enable = true;
-    style = ./swaync.css;
   };
 }
