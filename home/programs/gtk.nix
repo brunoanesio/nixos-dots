@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   home.pointerCursor = {
     gtk.enable = true;
@@ -14,16 +14,20 @@
       package = pkgs.papirus-icon-theme;
     };
     theme = {
-      name = "adw-gtk3-dark";
+      name = "adw-gtk3";
       package = pkgs.adw-gtk3;
     };
     font = {
       name = "Lexend";
       size = 12;
     };
+    gtk2 = {
+      configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
+      extraConfig = "gtk-application-prefer-dark-theme 1";
+    };
     gtk3 = {
       extraConfig = {
-        gtk-theme-name = "adw-gtk3-dark";
+        gtk-theme-name = "adw-gtk3";
         gtk-font-name = "Lexend 12";
         gtk-application-prefer-dark-theme = 1;
         gtk-cursor-theme-name = "Adwaita";
@@ -31,7 +35,7 @@
     };
     gtk4 = {
       extraConfig = {
-        gtk-theme-name = "adw-gtk3-dark";
+        gtk-theme-name = "adw-gtk3";
         gtk-font-name = "Lexend 12";
         gtk-application-prefer-dark-theme = 1;
         gtk-cursor-theme-name = "Adwaita";
