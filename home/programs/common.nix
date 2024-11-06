@@ -16,8 +16,6 @@
     jq
     zstd
     glow
-    iotop
-    iftop
     libnotify
     xdg-utils
     xdg-user-dirs
