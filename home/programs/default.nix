@@ -9,5 +9,6 @@
     ./wlogout
     ./swaync
     ./waybar
+    ./nvf
   ];
 }
