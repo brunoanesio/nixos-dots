@@ -13,7 +13,6 @@ in
     settings = {
       adjust_line_height = 1;
       adjust_column_width = 1;
-      # modify_font = "underline_thickness = 150%";
       modify_font = "underline_position 10";
       undercurl_style = "thick-sparse";
       background_opacity = 1.0;
@@ -32,5 +31,6 @@ in
       inactive_tab_font_style = "normal";
       tab_title_template = "{title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}";
     };
+    extraConfig = "modify_font = underline_thickness 150%";
   };
 }
