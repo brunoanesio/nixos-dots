@@ -3,9 +3,6 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
 {
-  config,
-  lib,
-  pkgs,
   ...
 }:
 
@@ -13,9 +10,12 @@
   imports = [
     ../../modules/system.nix
     ../../modules/hyprland.nix
+    ../../modules/gaming.nix
 
     ./hardware-configuration.nix
   ];
+
+  boot.kernelParams = [ "quiet" ];
 
   boot.loader = {
     efi = {
@@ -29,8 +29,9 @@
       enable = true;
       device = "nodev";
       efiSupport = true;
-      useOSProber = true;
+      useOSProber = false;
       configurationLimit = 5;
+      timeoutStyle = "hidden";
     };
   };
 
@@ -56,6 +57,6 @@
   # and migrated your data accordingly.
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 
 }
