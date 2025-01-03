@@ -1,6 +1,6 @@
-{ pkgs, ... }:
+{ ... }:
 let
-  font = "Iosevka";
+  font = "Iosevka Comfy Fixed Medium";
 in
 {
   programs.kitty = {
@@ -31,6 +31,6 @@ in
       inactive_tab_font_style = "normal";
       tab_title_template = "{title}{' :{}:'.format(num_windows) if num_windows > 1 else ''}";
     };
-    extraConfig = "modify_font = underline_thickness 150%";
+    extraConfig = "modify_font underline_thickness 150%";
   };
 }
