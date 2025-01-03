@@ -41,6 +41,8 @@ in
     ll = "ls -lah";
     lg = "lazygit";
     nixups = "sudo nixos-rebuild switch --recreate-lock-file --flake .";
+    "60hz" = "hyprctl keyword monitor HDMI-A-1,1920x1080@60,auto,1";
+    "75hz" = "hyprctl keyword monitor HDMI-A-1,1920x1080@75,auto,1";
     nixup = "sudo nixos-rebuild test --recreate-lock-file --flake .";
   };
 }
