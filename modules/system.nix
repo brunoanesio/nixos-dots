@@ -1,22 +1,20 @@
 { pkgs, lib, ... }:
 {
   users.users = {
-    artic = {
-      isNormalUser = true;
-      extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    };
     frost = {
       isNormalUser = true;
       extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-      packages = with pkgs; [
-        firefox
-        neovim
-        kitty
-        keepassxc
-        lazygit
-      ];
     };
   };
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+  powerManagement.cpuFreqGovernor = "performance";
+
+  services.xserver.videoDrivers = [ "amdgpu" ];
 
   nix.settings = {
     experimental-features = [
@@ -50,14 +48,24 @@
   fonts = {
     packages = with pkgs; [
       material-design-icons
-      iosevka
+      iosevka-comfy.comfy
+      iosevka-comfy.comfy-fixed
       nerdfonts
       jetbrains-mono
       font-awesome
       lexend
       poppins
       noto-fonts-color-emoji
+      iosevka
+      # (iosevka.override {
+      #   privateBuildPlan = {
+      #     family = "Iosevka SS07";
+      #     preset = [ "ss07" ];
+      #   };
+      #   set = "ss07";
+      # })
     ];
+    fontDir.enable = true;
     fontconfig = {
       enable = true;
       defaultFonts = {
@@ -83,6 +91,11 @@
     gnupg.agent = {
       enable = true;
       enableSSHSupport = false;
+      pinentryPackage = pkgs.pinentry-gtk2;
+      settings = {
+        max-cache-ttl = 6048000;
+        default-cache-ttl = 6048000;
+      };
     };
   };
 
