@@ -2,6 +2,7 @@
 let
   browser = [ "firefox.desktop" ];
   editor = [ "nvim.desktop" ];
+  explorer = [ "thunar.desktop" ];
 
   # XDG MIME types
   associations = {
@@ -18,6 +19,7 @@ let
     "x-scheme-handler/http" = browser;
     "x-scheme-handler/https" = browser;
     "x-scheme-handler/unknown" = browser;
+    "inode/directory" = explorer;
 
     "audio/*" = [ "mpv.desktop" ];
     "video/*" = [ "mpv.dekstop" ];
