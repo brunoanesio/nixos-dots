@@ -2,18 +2,17 @@
   description = "NixOS Configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf = {
-      url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
+    catppuccin = {
+      url = "github:catppuccin/nix";
     };
   };
 
@@ -21,6 +20,7 @@
     inputs@{
       self,
       nixpkgs,
+      catppuccin,
       home-manager,
       ...
     }:
@@ -33,6 +33,7 @@
           };
           modules = [
             ./hosts/nixos
+            catppuccin.nixosModules.catppuccin
             home-manager.nixosModules.home-manager
             {
               home-manager.extraSpecialArgs = {
@@ -40,7 +41,7 @@
               };
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.artic = import ./users/artic/home.nix;
+              home-manager.users.frost = import ./users/frost/home.nix;
               home-manager.backupFileExtension = "backup";
             }
           ];
