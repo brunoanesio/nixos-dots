@@ -19,6 +19,8 @@ let
     "x-scheme-handler/http" = browser;
     "x-scheme-handler/https" = browser;
     "x-scheme-handler/unknown" = browser;
+    "x-scheme-handler/nxm" = [ "modorganizer2-nxm-handler.desktop" ];
+    "x-scheme-handler/nxm-protocol" = [ "modorganizer2-nxm-handler.desktop" ];
     "inode/directory" = explorer;
 
     "audio/*" = [ "mpv.desktop" ];
