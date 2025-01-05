@@ -189,7 +189,6 @@
       extraConfig = {
         gtk-theme-name = "adw-gtk3";
         gtk-font-name = "Lexend 12";
-        gtk-application-prefer-dark-theme = 1;
         gtk-cursor-theme-name = "Adwaita";
       };
       extraCss = ''
