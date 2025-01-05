@@ -242,6 +242,7 @@
             notification = "󰡟";
           };
           on-click = "sleep 0.1 && swaync-client -t -sw";
+          on-click-right = "sleep 0.1 && swaync-client -C";
           return-type = "json";
           tooltip = false;
         };
