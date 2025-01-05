@@ -1,0 +1,8 @@
+require "plugins.cmp"
+require "plugins.lsp"
+require "plugins.conform"
+require "plugins.mini"
+require "plugins.treesitter"
+require "plugins.indent"
+require "plugins.gitsigns"
+require "plugins.colors"

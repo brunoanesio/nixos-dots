@@ -1,5 +1,10 @@
 { pkgs, ... }:
 {
+
+  imports = [
+    ./nvim
+  ];
+
   home.packages = with pkgs; [
     nodejs_22
     python3
@@ -9,12 +14,6 @@
     nixfmt-rfc-style
     gh
   ];
-
-  programs.neovim = {
-    enable = true;
-  };
-
-  xdg.configFile."nvim".source = ./nvim;
 
   programs.lazygit = {
     enable = true;

@@ -22,6 +22,7 @@
     bat.enable = true;
     cava.enable = true;
     fzf.enable = true;
+    nvim.enable = true;
     gtk = {
       icon.enable = true;
     };
