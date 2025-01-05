@@ -1,5 +1,10 @@
 { pkgs, lib, ... }:
 {
+
+  imports = [
+    ./services/nextdns.nix
+  ];
+
   users.users = {
     frost = {
       isNormalUser = true;
@@ -44,6 +49,9 @@
     ];
     useXkbConfig = false; # use xkb.options in tty.
   };
+
+  virtualisation.containers.enable = true;
+  virtualisation.podman.enable = true;
 
   fonts = {
     packages = with pkgs; [
@@ -100,12 +108,17 @@
   };
 
   security.polkit.enable = true;
+  security.rtkit.enable = true;
 
   services = {
     openssh.enable = true;
     pipewire = {
       enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
       pulse.enable = true;
+      jack.enable = true;
+      wireplumber.enable = true;
     };
   };
 
