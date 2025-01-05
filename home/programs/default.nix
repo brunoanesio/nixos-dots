@@ -31,9 +31,17 @@
     lutris
     heroic
     wineWowPackages.stable
+    winetricks
     protontricks
     zenity
     baobab
+    adwsteamgtk
+    distrobox
+    kdePackages.qtmultimedia
+    libsForQt5.qt5.qtmultimedia
+    libsForQt5.phonon
+    distrobox
+    podman
   ];
 
   programs = {
@@ -42,8 +50,12 @@
       settings = {
         vim_keys = true;
         update_ms = 500;
-        show_boxes = "proc cpu mem";
       };
+      extraConfig = ''
+        show_boxes = "proc cpu mem"
+        proc_filter_kernel = True
+        presets = "cpu:1:default,proc:0:default cpu:0:default,mem:0:default,net:0:default cpu:0:block,net:0:tty"
+      '';
     };
     ssh = {
       enable = true;
