@@ -70,3 +70,4 @@ cmp.setup.cmdline(":", {
   }),
 })
 cmp.setup(options)
+require("codeium").setup {}
