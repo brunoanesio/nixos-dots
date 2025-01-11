@@ -13,9 +13,9 @@
   home.packages = with pkgs; [
     zip
     unzip
+    rar
     p7zip
     htop
-    fastfetch
     zoxide
     wl-clipboard
     libnotify
@@ -37,11 +37,11 @@
     baobab
     adwsteamgtk
     distrobox
-    kdePackages.qtmultimedia
-    libsForQt5.qt5.qtmultimedia
-    libsForQt5.phonon
-    distrobox
     podman
+    stremio
+    qbittorrent-enhanced
+    nix-prefetch
+    nix-prefetch-git
   ];
 
   programs = {
@@ -60,6 +60,52 @@
     ssh = {
       enable = true;
       addKeysToAgent = "yes";
+    };
+    fastfetch = {
+      enable = true;
+      settings = {
+        logo = {
+          source = "nixos_small";
+          padding = {
+            top = 1;
+            bottom = 1;
+          };
+        };
+        modules = [
+          "break"
+          {
+            "type" = "os";
+            "key" = "OS  ";
+            "keyColor" = "31";
+          }
+          {
+            "type" = "kernel";
+            "key" = "KER ";
+            "keyColor" = "32";
+          }
+          {
+            "type" = "packages";
+            "key" = "PKG ";
+            "keyColor" = "33";
+          }
+          {
+            "type" = "shell";
+            "key" = "SH  ";
+            "keyColor" = "34";
+          }
+          {
+            "type" = "terminal";
+            "key" = "TER ";
+            "keyColor" = "35";
+          }
+          {
+            "type" = "wm";
+            "key" = "WM  ";
+            "keyColor" = "36";
+          }
+          "break"
+        ];
+      };
     };
     mangohud.enable = true;
     eza.enable = true;
