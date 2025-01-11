@@ -65,13 +65,6 @@
       poppins
       noto-fonts-color-emoji
       iosevka
-      # (iosevka.override {
-      #   privateBuildPlan = {
-      #     family = "Iosevka SS07";
-      #     preset = [ "ss07" ];
-      #   };
-      #   set = "ss07";
-      # })
     ];
     fontDir.enable = true;
     fontconfig = {
