@@ -30,7 +30,7 @@
 
   qt = {
     enable = true;
-    platformTheme.name = "gtk";
+    platformTheme.name = "qt5ct";
     style = {
       package = pkgs.catppuccin-qt5ct;
       name = "Catppuccin-Mocha";
@@ -92,8 +92,8 @@
         @define-color sidebar_bg_color @base;
         @define-color sidebar_fg_color @text;
         @define-color sidebar_backdrop_color @base;
-        @define-color sidebar_shade_color RGB(0 0 6 / 25%);
-        @define-color sidebar_border_color RGB(0 0 6 / 36%);
+        @define-color sidebar_shade_color RGB(0, 0, 6 / 25%);
+        @define-color sidebar_border_color RGB(0, 0, 6 / 36%);
 
         @define-color secondary_sidebar_bg_color @sidebar_backdrop_color;
         @define-color secondary_sidebar_fg_color @text;
