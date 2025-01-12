@@ -22,6 +22,8 @@
     enable = true;
   };
 
+  environment.variables.QT_QPA_PLATFORMTHEME = "kvantum";
+
   catppuccin = {
     flavor = "mocha";
     accent = "blue";

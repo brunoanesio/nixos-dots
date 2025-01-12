@@ -42,6 +42,8 @@
     qbittorrent-enhanced
     nix-prefetch
     nix-prefetch-git
+    libsForQt5.qt5ct
+    libsForQt5.qtstyleplugin-kvantum
   ];
 
   programs = {

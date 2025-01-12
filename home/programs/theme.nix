@@ -23,6 +23,7 @@
     cava.enable = true;
     fzf.enable = true;
     nvim.enable = true;
+    kvantum.enable = true;
     gtk = {
       icon.enable = true;
     };
@@ -30,10 +31,11 @@
 
   qt = {
     enable = true;
-    platformTheme.name = "qt5ct";
+    platformTheme.name = "kvantum";
     style = {
-      package = pkgs.catppuccin-qt5ct;
-      name = "Catppuccin-Mocha";
+      # package = pkgs.catppuccin-qt5ct;
+      package = pkgs.catppuccin-kvantum;
+      name = "kvantum";
     };
   };
 
