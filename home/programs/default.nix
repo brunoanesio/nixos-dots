@@ -44,6 +44,11 @@
     nix-prefetch-git
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
+    streamlink
+    pulseaudio
+    mpv
+    pavucontrol
+    playerctl
   ];
 
   programs = {
