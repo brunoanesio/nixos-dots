@@ -6,10 +6,17 @@ let
 in
 {
   imports = [
-    ./common.nix
     ./terminals.nix
     ./bash.nix
   ];
+
+  programs = {
+    zoxide = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+    };
+  };
 
   home.sessionVariables = {
     # clean up ~
@@ -44,5 +51,7 @@ in
     "60hz" = "hyprctl keyword monitor HDMI-A-1,1920x1080@60,auto,1";
     "75hz" = "hyprctl keyword monitor HDMI-A-1,1920x1080@75,auto,1";
     nixup = "sudo nixos-rebuild test --recreate-lock-file --flake .";
+    dusize = "du -hd 1 | sort -hr";
+    duten = "du -hd 1 | sort -hr | tail -n +2 | head";
   };
 }
