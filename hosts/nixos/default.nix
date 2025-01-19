@@ -2,10 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{
-  ...
-}:
-
+{ pkgs, ... }:
 {
   imports = [
     ../../modules/system.nix
@@ -16,6 +13,12 @@
   ];
 
   boot.kernelParams = [ "quiet" ];
+
+  boot.kernel.sysctl = {
+    "net.ipv4.ip_forward" = 1;
+  };
+
+  boot.kernelPackages = pkgs.linuxPackages_cachyos;
 
   boot.loader = {
     efi = {

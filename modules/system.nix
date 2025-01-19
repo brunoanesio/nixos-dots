@@ -17,6 +17,13 @@
     enable32Bit = true;
   };
 
+  networking = {
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [ 7777 ];
+    };
+  };
+
   powerManagement.cpuFreqGovernor = "performance";
 
   services.xserver.videoDrivers = [ "amdgpu" ];
@@ -123,10 +130,17 @@
     lm_sensors
     pciutils
     usbutils
+    udiskie
+    udisks
     gnupg
     which
     tree
   ];
+
+  services.scx = {
+    enable = true;
+    scheduler = "scx_lavd";
+  };
 
   systemd.services.lact = {
     description = "AMDGPU Control Daemon";

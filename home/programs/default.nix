@@ -49,6 +49,10 @@
     mpv
     pavucontrol
     playerctl
+    prismlauncher
+    dotnet-sdk_8
+    file
+    fastfetch
   ];
 
   programs = {
@@ -67,52 +71,6 @@
     ssh = {
       enable = true;
       addKeysToAgent = "yes";
-    };
-    fastfetch = {
-      enable = true;
-      settings = {
-        logo = {
-          source = "nixos_small";
-          padding = {
-            top = 1;
-            bottom = 1;
-          };
-        };
-        modules = [
-          "break"
-          {
-            "type" = "os";
-            "key" = "OS  ";
-            "keyColor" = "31";
-          }
-          {
-            "type" = "kernel";
-            "key" = "KER ";
-            "keyColor" = "32";
-          }
-          {
-            "type" = "packages";
-            "key" = "PKG ";
-            "keyColor" = "33";
-          }
-          {
-            "type" = "shell";
-            "key" = "SH  ";
-            "keyColor" = "34";
-          }
-          {
-            "type" = "terminal";
-            "key" = "TER ";
-            "keyColor" = "35";
-          }
-          {
-            "type" = "wm";
-            "key" = "WM  ";
-            "keyColor" = "36";
-          }
-          "break"
-        ];
-      };
     };
     mangohud.enable = true;
     eza.enable = true;
