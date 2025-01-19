@@ -24,6 +24,10 @@
     recursive = true;
   };
 
+  home.file.".local/bin/killwindow" = {
+    source = ./bin/killwindow;
+  };
+
   services.hyprpaper = {
     enable = true;
     settings = {
