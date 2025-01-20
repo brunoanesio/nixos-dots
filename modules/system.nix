@@ -21,6 +21,7 @@
     firewall = {
       enable = true;
       allowedTCPPorts = [ 7777 ];
+      allowedUDPPorts = [ 7777 ];
     };
   };
 
@@ -151,4 +152,9 @@
     };
     enable = true;
   };
+
+  # services.myNextDNS = {
+  #   enable = true;
+  #   nextdnsId = "";
+  # };
 }

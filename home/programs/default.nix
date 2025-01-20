@@ -53,6 +53,7 @@
     dotnet-sdk_8
     file
     fastfetch
+    macchanger
   ];
 
   programs = {
