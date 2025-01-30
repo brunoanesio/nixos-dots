@@ -17,6 +17,17 @@
     enable32Bit = true;
   };
 
+  catppuccin = {
+    flavor = "mocha";
+    accent = "blue";
+    sddm = {
+      enable = true;
+      font = "Lexend";
+      fontSize = "12";
+    };
+    grub.enable = true;
+  };
+
   networking = {
     firewall = {
       enable = true;
@@ -125,6 +136,9 @@
 
   environment.systemPackages = with pkgs; [
     vim
+    gparted
+    gnome-disk-utility
+    dotnet-sdk_8
     wget
     curl
     git

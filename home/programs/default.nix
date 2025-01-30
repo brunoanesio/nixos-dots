@@ -40,7 +40,6 @@
     podman
     stremio
     qbittorrent-enhanced
-    nix-prefetch
     nix-prefetch-git
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
@@ -50,10 +49,8 @@
     pavucontrol
     playerctl
     prismlauncher
-    dotnet-sdk_8
     file
     fastfetch
-    macchanger
   ];
 
   programs = {
