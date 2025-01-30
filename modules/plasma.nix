@@ -12,11 +12,17 @@
       sddm = {
         wayland.enable = true;
         enable = true;
-        package = pkgs.kdePackages.sddm;
       };
     };
     desktopManager.plasma6.enable = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    (catppuccin-kde.override {
+      flavour = [ "mocha" ];
+      accents = [ "blue" ];
+    })
+  ];
 
   programs.ssh.startAgent = true;
   programs.xfconf.enable = true;
