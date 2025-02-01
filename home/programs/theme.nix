@@ -63,6 +63,7 @@
         gtk-font-name = "Lexend 12";
         gtk-application-prefer-dark-theme = 1;
         gtk-cursor-theme-name = "Adwaita";
+        gtk-decoration-layout = "appmenu:none";
       };
       extraCss = ''
         /* Catppuccin colors */

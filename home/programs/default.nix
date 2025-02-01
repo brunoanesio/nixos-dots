@@ -51,6 +51,7 @@
     prismlauncher
     file
     fastfetch
+    dconf-editor
   ];
 
   programs = {
