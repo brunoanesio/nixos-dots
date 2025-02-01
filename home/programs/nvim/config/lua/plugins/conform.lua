@@ -1,15 +1,11 @@
-require("conform").setup({
+require("conform").setup {
   formatters_by_ft = {
-    lua = { "stylua"},
+    lua = { "stylua" },
     css = { "prettierd" },
     scss = { "prettierd" },
     json = { "prettierd" },
     jsonc = { "prettierd" },
     yaml = { "prettierd" },
-    go = { "goimports", "gofmt", "golines" },
-    gomod = { "goimports", "gofmt" },
-    gowork = { "goimports", "gofmt" },
-    gotmpl = { "goimports", "gofmt" },
     python = { "ruff_format" },
     sh = { "shfmt" },
     bash = { "shfmt" },
@@ -26,4 +22,4 @@ require("conform").setup({
     timeout_ms = 500,
     lsp_fallback = true,
   },
-})
+}

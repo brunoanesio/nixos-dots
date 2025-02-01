@@ -33,9 +33,6 @@
       prettierd
       basedpyright
       clang-tools
-      gotools
-      gopls
-      golines
       nil
       stylua
       shfmt
