@@ -4,6 +4,7 @@
 }:
 {
   imports = [
+    ./mpv
     ./dev.nix
     ./theme.nix
     ./spotify.nix
@@ -45,13 +46,13 @@
     libsForQt5.qtstyleplugin-kvantum
     streamlink
     pulseaudio
-    mpv
     pavucontrol
     playerctl
     prismlauncher
     file
     fastfetch
     dconf-editor
+    vesktop
   ];
 
   programs = {
@@ -83,4 +84,5 @@
     cava.enable = true;
   };
   xdg.configFile."MangoHud".source = ./mangohud;
+  xdg.configFile."streamlink/config".source = ./streamlink/config;
 }

@@ -12,6 +12,12 @@
     };
   };
 
+  i18n.supportedLocales = [
+    "C.UTF-8/UTF-8"
+    "en_US.UTF-8/UTF-8"
+    "pt_BR.UTF-8/UTF-8"
+  ];
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true;

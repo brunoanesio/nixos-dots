@@ -6,8 +6,8 @@
 {
   imports = [
     ../../modules/system.nix
-    # ../../modules/plasma.nix
-    ../../modules/hyprland.nix
+    ../../modules/plasma.nix
+    # ../../modules/hyprland.nix
     ../../modules/gaming.nix
 
     ./hardware-configuration.nix
@@ -19,7 +19,8 @@
     "net.ipv4.ip_forward" = 1;
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  # boot.kernelPackages = pkgs.linuxPackages_cachyos;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   boot.loader = {
     efi = {

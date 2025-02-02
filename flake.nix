@@ -3,13 +3,13 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     spicetify-nix = {
-      url = "github:Gerg-L/spicetify-nix";
+      url = "github:Gerg-L/spicetify-nix?rev=d42d7a91019e158931c752e39392b18e923e5229";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin = {
@@ -21,7 +21,7 @@
     inputs@{
       self,
       nixpkgs,
-      chaotic,
+      # chaotic,
       catppuccin,
       home-manager,
       ...
@@ -36,9 +36,9 @@
           modules = [
             ./hosts/nixos
             catppuccin.nixosModules.catppuccin
-            chaotic.nixosModules.nyx-cache
-            chaotic.nixosModules.nyx-overlay
-            chaotic.nixosModules.nyx-registry
+            # chaotic.nixosModules.nyx-cache
+            # chaotic.nixosModules.nyx-overlay
+            # chaotic.nixosModules.nyx-registry
             home-manager.nixosModules.home-manager
             {
               home-manager.extraSpecialArgs = {
