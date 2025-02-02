@@ -1,0 +1,7 @@
+player=mpv
+player-args=--no-border --no-keepaspect-window --window-maximized=yes --loop-playlist=inf --loop-file=inf --cache=yes --demuxer-max-back-bytes=1800M
+twitch-low-latency
+twitch-disable-ads
+hls-live-edge=1
+twitch-proxy-playlist=https://lb-sa.cdn-perfprod.com
+default-stream=best
