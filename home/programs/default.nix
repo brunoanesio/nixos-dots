@@ -22,7 +22,6 @@
     libnotify
     xdg-utils
     xdg-user-dirs
-    pinentry-gtk2
     keepassxc
     lact
     chatterino2

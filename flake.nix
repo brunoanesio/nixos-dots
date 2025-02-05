@@ -9,7 +9,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     spicetify-nix = {
-      url = "github:Gerg-L/spicetify-nix?rev=d42d7a91019e158931c752e39392b18e923e5229";
+      url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin = {
