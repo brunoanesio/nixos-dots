@@ -52,6 +52,8 @@
     fastfetch
     dconf-editor
     vesktop
+    mousai
+    filelight
   ];
 
   programs = {
@@ -82,6 +84,14 @@
     tealdeer.enable = true;
     cava.enable = true;
   };
+
+  dconf.settings = {
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = [ "qemu:///system" ];
+      uris = [ "qemu:///system" ];
+    };
+  };
+
   xdg.configFile."MangoHud".source = ./mangohud;
   xdg.configFile."streamlink/config".source = ./streamlink/config;
 }
