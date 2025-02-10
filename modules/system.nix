@@ -8,7 +8,10 @@
   users.users = {
     frost = {
       isNormalUser = true;
-      extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+      extraGroups = [
+        "wheel"
+        "libvirtd"
+      ];
     };
   };
 
@@ -65,7 +68,8 @@
 
   time.timeZone = "America/Sao_Paulo";
 
-  i18n.defaultLocale = "en_US.UTF-8";
+  # i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "pt_BR.UTF-8";
   console = {
     font = "ter-124b";
     keyMap = "br-abnt2";
@@ -75,8 +79,12 @@
     useXkbConfig = false; # use xkb.options in tty.
   };
 
-  virtualisation.containers.enable = true;
-  virtualisation.podman.enable = true;
+  virtualisation = {
+    containers.enable = true;
+    podman.enable = true;
+    libvirtd.enable = true;
+    spiceUSBRedirection.enable = true;
+  };
 
   fonts = {
     packages = with pkgs; [
@@ -114,6 +122,7 @@
 
   programs = {
     dconf.enable = true;
+    virt-manager.enable = true;
     gnupg.agent = {
       enable = true;
       enableSSHSupport = false;
