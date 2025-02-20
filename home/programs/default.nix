@@ -35,7 +35,6 @@
     protontricks
     zenity
     baobab
-    adwsteamgtk
     distrobox
     podman
     stremio
@@ -43,7 +42,6 @@
     nix-prefetch-git
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
-    streamlink
     pulseaudio
     pavucontrol
     playerctl
@@ -53,7 +51,7 @@
     dconf-editor
     vesktop
     mousai
-    filelight
+    resources
   ];
 
   programs = {
@@ -72,6 +70,16 @@
     ssh = {
       enable = true;
       addKeysToAgent = "yes";
+    };
+    obs-studio = {
+      enable = true;
+      plugins = with pkgs.obs-studio-plugins; [
+        obs-vaapi
+        obs-vkcapture
+        obs-tuna
+        obs-pipewire-audio-capture
+        input-overlay
+      ];
     };
     mangohud.enable = true;
     eza.enable = true;
