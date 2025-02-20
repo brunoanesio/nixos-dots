@@ -6,8 +6,8 @@
 {
   imports = [
     ../../modules/system.nix
-    ../../modules/plasma.nix
-    # ../../modules/hyprland.nix
+    # ../../modules/plasma.nix
+    ../../modules/hyprland.nix
     ../../modules/gaming.nix
 
     ./hardware-configuration.nix

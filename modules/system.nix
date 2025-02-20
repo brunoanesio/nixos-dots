@@ -68,8 +68,8 @@
 
   time.timeZone = "America/Sao_Paulo";
 
-  # i18n.defaultLocale = "en_US.UTF-8";
-  i18n.defaultLocale = "pt_BR.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
+  # i18n.defaultLocale = "pt_BR.UTF-8";
   console = {
     font = "ter-124b";
     keyMap = "br-abnt2";
@@ -146,6 +146,18 @@
       pulse.enable = true;
       jack.enable = true;
       wireplumber.enable = true;
+    };
+    ollama = {
+      enable = true;
+      openFirewall = true;
+    };
+    open-webui = {
+      enable = true;
+      openFirewall = true;
+      host = "192.168.194.192";
+    };
+    zerotierone = {
+      enable = true;
     };
   };
 
