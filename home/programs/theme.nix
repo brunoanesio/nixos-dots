@@ -24,6 +24,7 @@
     fzf.enable = true;
     nvim.enable = true;
     kvantum.enable = true;
+    starship.enable = true;
     gtk = {
       icon.enable = true;
     };
