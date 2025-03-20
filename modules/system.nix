@@ -83,6 +83,7 @@
     containers.enable = true;
     podman.enable = true;
     libvirtd.enable = true;
+    waydroid.enable = false;
     spiceUSBRedirection.enable = true;
   };
 
@@ -148,15 +149,18 @@
       wireplumber.enable = true;
     };
     ollama = {
-      enable = true;
+      enable = false;
       openFirewall = true;
     };
     open-webui = {
-      enable = true;
+      enable = false;
       openFirewall = true;
       host = "192.168.194.192";
     };
     zerotierone = {
+      enable = false;
+    };
+    archisteamfarm = {
       enable = true;
     };
   };

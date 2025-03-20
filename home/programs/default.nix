@@ -52,6 +52,8 @@
     vesktop
     mousai
     resources
+    krita
+    nh
   ];
 
   programs = {
