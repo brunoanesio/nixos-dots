@@ -34,9 +34,9 @@
       enable = true;
       device = "nodev";
       efiSupport = true;
-      useOSProber = false;
+      useOSProber = true;
       configurationLimit = 5;
-      timeoutStyle = "hidden";
+      timeoutStyle = "menu";
     };
   };
 
