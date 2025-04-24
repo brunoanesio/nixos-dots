@@ -82,7 +82,7 @@
   virtualisation = {
     containers.enable = true;
     podman.enable = true;
-    libvirtd.enable = true;
+    libvirtd.enable = false;
     waydroid.enable = false;
     spiceUSBRedirection.enable = true;
   };
@@ -123,7 +123,7 @@
 
   programs = {
     dconf.enable = true;
-    virt-manager.enable = true;
+    virt-manager.enable = false;
     gnupg.agent = {
       enable = true;
       enableSSHSupport = false;
