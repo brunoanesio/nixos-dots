@@ -54,6 +54,7 @@
     resources
     krita
     nh
+    google-chrome
   ];
 
   programs = {
