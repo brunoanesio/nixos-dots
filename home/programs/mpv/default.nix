@@ -1,4 +1,12 @@
 { pkgs, ... }:
+let
+  skipIntro = pkgs.fetchFromGitHub {
+    owner = "rui-ddc";
+    repo = "skip-intro";
+    rev = "master";
+    hash = "sha256-1rxwPiYIj4oxy8piRpiJeWU4b8vCnLCOvxt7uoru5xc=";
+  };
+in
 {
   programs.mpv = {
     enable = true;
@@ -21,5 +29,5 @@
     #   };
     # };
   };
-  home.file.".config/mpv/scripts/skip-intro.lua".source = ./scripts/skip-intro.lua;
+  home.file.".config/mpv/scripts/skip-intro.lua".source = "${skipIntro}/skip-intro.lua";
 }
