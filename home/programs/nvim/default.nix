@@ -20,7 +20,7 @@
       cmp-nvim-lsp
       cmp-path
       cmp_luasnip
-      codeium-nvim
+      windsurf-nvim
       luasnip
       friendly-snippets
     ];

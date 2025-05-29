@@ -93,13 +93,14 @@
       material-design-icons
       iosevka-comfy.comfy
       iosevka-comfy.comfy-fixed
-      nerdfonts
       jetbrains-mono
       font-awesome
       lexend
       poppins
       noto-fonts-color-emoji
       iosevka
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.iosevka
     ];
     fontDir.enable = true;
     fontconfig = {
