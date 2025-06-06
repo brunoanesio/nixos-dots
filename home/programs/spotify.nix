@@ -20,6 +20,9 @@
       ];
       enabledSnippets = with spicePkgs.snippets; [
         removeGradient
+        ''
+          * { font-family: "Lexend" !important }
+        ''
       ];
       theme = spicePkgs.themes.catppuccin;
       colorScheme = "mocha";

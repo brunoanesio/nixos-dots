@@ -54,7 +54,8 @@
     resources
     krita
     nh
-    google-chrome
+    radeontop
+    amdgpu_top
   ];
 
   programs = {
