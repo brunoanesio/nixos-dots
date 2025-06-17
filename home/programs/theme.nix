@@ -31,6 +31,7 @@
       enable = true;
       apply = true;
     };
+    obs.enable = true;
   };
 
   qt = {

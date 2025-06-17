@@ -80,7 +80,6 @@
       plugins = with pkgs.obs-studio-plugins; [
         obs-vaapi
         obs-vkcapture
-        obs-tuna
         obs-pipewire-audio-capture
         input-overlay
       ];
