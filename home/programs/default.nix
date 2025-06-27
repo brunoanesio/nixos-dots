@@ -24,12 +24,11 @@
     xdg-user-dirs
     keepassxc
     lact
-    chatterino2
+    chatterino7
     file-roller
     killall
     nix-tree
     lutris
-    heroic
     wineWowPackages.stable
     winetricks
     protontricks
@@ -56,6 +55,7 @@
     nh
     radeontop
     amdgpu_top
+    wl-clicker
   ];
 
   programs = {
