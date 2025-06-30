@@ -56,6 +56,7 @@
     radeontop
     amdgpu_top
     wl-clicker
+    # millennium
   ];
 
   programs = {
@@ -66,9 +67,9 @@
         update_ms = 500;
       };
       extraConfig = ''
-        show_boxes = "proc cpu mem"
+        show_boxes = "cpu mem proc"
         proc_filter_kernel = True
-        presets = "cpu:1:default,proc:0:default cpu:0:default,mem:0:default,net:0:default cpu:0:block,net:0:tty"
+        presets = "cpu:1:default,proc:0:default cpu:0:default,mem:0:default"
       '';
     };
     ssh = {

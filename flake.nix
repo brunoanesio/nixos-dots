@@ -13,6 +13,7 @@
     catppuccin = {
       url = "github:catppuccin/nix";
     };
+    # millennium.url = "git+https://github.com/SteamClientHomebrew/Millennium";
   };
 
   outputs =
@@ -43,6 +44,7 @@
               home-manager.users.frost = import ./users/frost/home.nix;
               home-manager.backupFileExtension = "backup";
             }
+            # (import ./overlays)
           ];
         };
       };
