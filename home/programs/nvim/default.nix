@@ -7,6 +7,8 @@
       indent-blankline-nvim
       nvim-lspconfig
       nvim-treesitter
+      nvim-treesitter-parsers.nix
+      nvim-treesitter-parsers.python
       plenary-nvim
       lazygit-nvim
       gitsigns-nvim

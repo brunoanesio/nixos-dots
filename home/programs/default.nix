@@ -56,6 +56,8 @@
     radeontop
     amdgpu_top
     wl-clicker
+    tree-sitter
+    nodejs
     # millennium
   ];
 
