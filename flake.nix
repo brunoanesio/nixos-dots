@@ -13,7 +13,10 @@
     catppuccin = {
       url = "github:catppuccin/nix";
     };
-    # millennium.url = "git+https://github.com/SteamClientHomebrew/Millennium";
+    lsfg-vk-flake = {
+      url = "github:pabloaul/lsfg-vk-flake/main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -22,6 +25,7 @@
       nixpkgs,
       catppuccin,
       home-manager,
+      lsfg-vk-flake,
       ...
     }:
     {
@@ -35,6 +39,7 @@
             ./hosts/nixos
             catppuccin.nixosModules.catppuccin
             home-manager.nixosModules.home-manager
+            lsfg-vk-flake.nixosModules.default
             {
               home-manager.extraSpecialArgs = {
                 inherit inputs;
@@ -44,7 +49,6 @@
               home-manager.users.frost = import ./users/frost/home.nix;
               home-manager.backupFileExtension = "backup";
             }
-            # (import ./overlays)
           ];
         };
       };

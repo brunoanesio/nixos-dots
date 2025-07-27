@@ -28,10 +28,11 @@
       efiSysMountPoint = "/boot";
     };
     systemd-boot = {
-      enable = false;
+      enable = true;
+      configurationLimit = 5;
     };
     grub = {
-      enable = true;
+      enable = false;
       device = "nodev";
       efiSupport = true;
       useOSProber = true;
