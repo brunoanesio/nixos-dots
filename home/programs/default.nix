@@ -58,7 +58,8 @@
     wl-clicker
     tree-sitter
     nodejs
-    # millennium
+    google-chrome
+    vscodium
   ];
 
   programs = {

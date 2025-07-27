@@ -9,6 +9,8 @@
       nvim-treesitter
       nvim-treesitter-parsers.nix
       nvim-treesitter-parsers.python
+      nvim-treesitter-parsers.c
+      nvim-treesitter-parsers.cpp
       plenary-nvim
       lazygit-nvim
       gitsigns-nvim
