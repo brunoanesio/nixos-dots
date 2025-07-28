@@ -60,6 +60,8 @@
     nodejs
     google-chrome
     vscodium
+    gpu-screen-recorder
+    gpu-screen-recorder-gtk
   ];
 
   programs = {

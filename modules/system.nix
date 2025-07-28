@@ -35,7 +35,7 @@
       font = "Lexend";
       fontSize = "12";
     };
-    grub.enable = true;
+    grub.enable = false;
   };
 
   networking = {
@@ -172,7 +172,7 @@
       enable = false;
     };
     archisteamfarm = {
-      enable = true;
+      enable = false;
     };
   };
 
@@ -180,7 +180,6 @@
     vim
     gparted
     gnome-disk-utility
-    dotnet-sdk_8
     wget
     curl
     git
@@ -194,10 +193,10 @@
     tree
   ];
 
-  services.scx = {
-    enable = true;
-    scheduler = "scx_lavd";
-  };
+  # services.scx = {
+  #   enable = true;
+  #   scheduler = "scx_lavd";
+  # };
 
   systemd.services.lact = {
     description = "AMDGPU Control Daemon";

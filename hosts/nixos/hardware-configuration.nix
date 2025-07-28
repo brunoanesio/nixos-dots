@@ -56,14 +56,14 @@
     ];
   };
 
-  fileSystems."/data" = {
-    device = "/dev/disk/by-label/data";
-    fsType = "ext4";
-    options = [
-      "defaults"
-      "x-gvfs-show"
-    ];
-  };
+#  fileSystems."/data" = {
+#    device = "/dev/disk/by-label/data";
+#    fsType = "ext4";
+#    options = [
+#      "defaults"
+#      "x-gvfs-show"
+#    ];
+#  };
 
   swapDevices = [ ];
 
