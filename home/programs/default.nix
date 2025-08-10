@@ -62,6 +62,7 @@
     vscodium
     gpu-screen-recorder
     gpu-screen-recorder-gtk
+    vulkan-tools
   ];
 
   programs = {
